@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col, Button } from "antd";
 
-function TaskCard({ taskData }) {
+function TaskCard({ taskData, onDelete }) {
   return (
     <Col>
       <Card
@@ -15,6 +15,13 @@ function TaskCard({ taskData }) {
             alt={`Pic of ${taskData.name}`}
             style={{ width: "95%", height: "100px" }}
           />
+          <Button
+            id="delete-btn"
+            type="primary"
+            onClick={() => onDelete(taskData.name)}
+          >
+            Delete
+          </Button>
         </div>
         <div style={{ width: "60%", height: "200px" }}>
           <p>
