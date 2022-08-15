@@ -32,14 +32,51 @@ h1 {
 }
 
 input[type="text"] {
-  width: 50%;
+  width: 60%;
   padding: 5px 10px;
   margin-left: 10px;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  width: 10%;
+  padding: 5px 10px;
+  margin-left: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
 }
 
 label {
   font-size: 16px;
   margin-left: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+form button {
+  border: 1px solid black;
+  width: 100px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#top-container {
+  display: flex;
+  justify-content: center;
+}
+
+#top-container div {
+  width: 50%;
 }

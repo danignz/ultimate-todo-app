@@ -3,6 +3,7 @@ import "./App.css";
 import tasks from "./list.json";
 import TaskCard from "./components/TaskCard";
 import SearchBar from "./components/SearchBar";
+import NewTask from "./components/NewTask";
 
 function App() {
   const [tasksList, setTasksList] = useState(tasks);
@@ -26,10 +27,19 @@ function App() {
     }
   };
 
+  const handleNewTask = (task) => {
+    const updatedTasks = [...tasksList];
+    updatedTasks.unshift(task);
+    setTasksList(updatedTasks);
+  };
+
   return (
     <div className="mainApp">
       <h1>TO DO LIST APP</h1>
-      <SearchBar onSearch={handleSearch} />
+      <div id="top-container">
+        <SearchBar onSearch={handleSearch} />
+        <NewTask newTask={handleNewTask} />
+      </div>
       <div className="container">
         {tasksList.map((task) => {
           return (
