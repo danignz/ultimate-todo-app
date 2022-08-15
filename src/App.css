@@ -1,0 +1,19 @@
+div.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#card > div {
+  display: flex;
+  /* background-color: aqua; */
+}
+
+.ant-card-body {
+  padding: 10px !important;
+}
+
+.ant-card-head {
+}
+
+.ant-col {
+}
