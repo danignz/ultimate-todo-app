@@ -3,7 +3,7 @@ import { Input } from "antd";
 
 export default function SearchBar({ onSearch }) {
   return (
-    <div>
+    <div id="searchbar">
       <label>Search</label>
       <Input
         type="text"

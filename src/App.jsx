@@ -4,6 +4,7 @@ import tasks from "./list.json";
 import TaskCard from "./components/TaskCard";
 import SearchBar from "./components/SearchBar";
 import NewTask from "./components/NewTask";
+import coffeepic from "./images/welcome-image.jpg";
 
 function App() {
   const [tasksList, setTasksList] = useState(tasks);
@@ -44,7 +45,10 @@ function App() {
     <div className="mainApp">
       <h1>TO DO LIST APP</h1>
       <div id="top-container">
-        <SearchBar onSearch={handleSearch} />
+        <div>
+          <img src={coffeepic} alt="Coffe pic" />
+          <SearchBar onSearch={handleSearch} />
+        </div>
         <NewTask newTask={handleNewTask} />
       </div>
       <button onClick={handleUrgency} id="order-btn">
