@@ -48,7 +48,6 @@ input[type="number"] {
 }
 
 input[type="checkbox"] {
-  margin-bottom: 10px;
   margin-left: 10px;
   width: 15px;
   height: 15px;
@@ -66,10 +65,13 @@ form {
 }
 
 form button {
-  border: 1px solid black;
-  width: 100px;
-  padding: 10px;
-  margin: 0 auto;
+  border: 1px solid white;
+  width: 70px;
+  padding: 5px;
+  margin-left: 250px;
+  margin-bottom: 20px;
+  background-color: rgb(1, 141, 1);
+  color: white;
 }
 
 #top-container {
@@ -79,4 +81,12 @@ form button {
 
 #top-container div {
   width: 50%;
+}
+
+#order-btn {
+  margin-left: 5px;
+  background-color: rgb(62, 0, 68);
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
 }

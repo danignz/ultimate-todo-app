@@ -31,6 +31,13 @@ function App() {
     const updatedTasks = [...tasksList];
     updatedTasks.unshift(task);
     setTasksList(updatedTasks);
+    /* Added state to not lost the added item when reset the search bar list */
+    setCurrentTotal(updatedTasks);
+  };
+
+  const handleUrgency = () => {
+    const ordered = [...tasksList].sort((a, b) => b.urgency - a.urgency);
+    setTasksList(ordered);
   };
 
   return (
@@ -40,6 +47,9 @@ function App() {
         <SearchBar onSearch={handleSearch} />
         <NewTask newTask={handleNewTask} />
       </div>
+      <button onClick={handleUrgency} id="order-btn">
+        Sort by Urgency
+      </button>
       <div className="container">
         {tasksList.map((task) => {
           return (
